@@ -1,5 +1,5 @@
 export interface TODOItem {
   description: string;
-  dueDate: Date;
+  dueDate?: Date;
   priority: string;
 }

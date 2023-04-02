@@ -1,1 +1,19 @@
-<p>filter works!</p>
+<hr>
+<div style="text-align: center;">
+  Filter:
+  <mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <input matInput [(ngModel)]="description" (change)="filterItem()">
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Priority</mat-label>
+    <mat-select [(value)]="priority" (selectionChange)="filterItem()">
+      <mat-option value="">Select</mat-option>
+      <mat-option value="low">Low</mat-option>
+      <mat-option value="medium">Medium</mat-option>
+      <mat-option value="high">High</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<hr>
