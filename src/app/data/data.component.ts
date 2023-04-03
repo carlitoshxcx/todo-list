@@ -17,7 +17,24 @@ import { TODOItem } from '../core/interfaces/item';
 export class DataComponent implements OnInit {
   displayedColumns: string[] = ['status', 'description', 'dueDate', 'priority'];
   dataSource: MatTableDataSource<TODOData>;
-  dataValues: TODOData[] = [];
+  dataValues: TODOData[] = [{
+    status: 'Pending',
+    description: 'Add fields',
+    dueDate: '4/2/2023',
+    priority: 'Low'
+  },
+  {
+    status: 'Pending',
+    description: 'Build UI',
+    dueDate: '4/2/2023',
+    priority: 'Medium'
+  },
+  {
+    status: 'Pending',
+    description: 'Create filters',
+    dueDate: '4/2/2023',
+    priority: 'High'
+  }];
 
   @Input() data?: Subject<TODOData>;
   @Input() filter?: Subject<TODOItem>;
