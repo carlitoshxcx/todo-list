@@ -1,0 +1,5 @@
+<div style="text-align: center;">
+  <app-form (itemAdded)="add($event)"></app-form>
+  <app-filter (itemToFilter)="filter($event)"></app-filter>
+  <app-data [filter]="filter$" [data]="data$"></app-data>
+</div>

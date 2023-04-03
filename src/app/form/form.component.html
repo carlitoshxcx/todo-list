@@ -1,0 +1,27 @@
+<h1>TODO List</h1>
+<form #form="ngForm">
+  <mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <input matInput name="description" #description [(ngModel)]="descriptionValue">
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Due Date</mat-label>
+    <input matInput name="dueDate" #dueDate [min]="minDate" [matDatepicker]="picker" [(ngModel)]="dueDateValue" (click)="picker.open()">
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Priority</mat-label>
+    <mat-select #priority [(value)]="priorityValue">
+      <mat-option value="">Select</mat-option>
+      <mat-option value="low">Low</mat-option>
+      <mat-option value="medium">Medium</mat-option>
+      <mat-option value="high">High</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <button mat-fab color="accent" aria-label="Add" (click)="addItem()">
+    <mat-icon>add_circle</mat-icon>
+  </button>
+</form>
