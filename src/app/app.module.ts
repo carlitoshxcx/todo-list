@@ -14,6 +14,8 @@ import { FilterComponent } from './filter/filter.component';
 import { FormComponent } from './form/form.component';
 import { DataComponent } from './data/data.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     MatDatepickerModule,
     MatIconModule,
+    MatTableModule,
+    MatPaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
